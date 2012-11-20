@@ -1,6 +1,6 @@
 # To Ruby, From Perl
 Dear Ruby,  
-What in the hell is with the weird syntax.
+What the hell.
 
 Love,  
 Perl
