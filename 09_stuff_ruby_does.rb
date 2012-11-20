@@ -10,12 +10,12 @@ words = ['man', 'dog', 'diamonds', 'girl']
 
 # mapper
 counts = words.map do |word|
-	word.size
+  word.size
 end
 
 # reducer
 total = counts.reduce(0) do |sum, value|
-	sum + value
+  sum + value
 end
 puts "Total letter count: #{total}."
 

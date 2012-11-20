@@ -8,13 +8,13 @@
 section_spacer "07. More on blocks"
 
 def get_web_service options={}
-	# defaults
-	options = {
-		:url => "http://whatever.com",
-		:path => '/api',
-		:params => { :muffins => true }
-	}.merge options
-	puts options
+  # defaults
+  options = {
+    :url => "http://whatever.com",
+    :path => '/api',
+    :params => { :muffins => true }
+  }.merge options
+  puts options
 end
 
 get_web_service({:url => "foo.com"})
@@ -22,9 +22,9 @@ get_web_service({:url => "foo.com"})
 # That's fine for simple options.  But what if we want to give more control outside the method?
 # Here's a trick people use.  Set up 
 module App
-	class << self
-	  attr_accessor :configuration
-	end
+  class << self
+    attr_accessor :configuration
+  end
 
   def self.configure
     self.configuration ||= Configuration.new
@@ -43,14 +43,14 @@ module App
 end
 
 App.configure do |config|
-	config.url = 'foo.com'
+  config.url = 'foo.com'
 end
 
 puts App.configuration.inspect
 #<App::Configuration:0x007faf43086138 @url="foo.com", @path="/api", @params={:muffins=>true}>
 
 App.configure do |config|
-	config.path = '/weeeeee'
+  config.path = '/weeeeee'
 end
 puts App.configuration.attributes
 #<App::Configuration:0x007faad304e180 @url="foo.com", @path="/weeeeee", @params={:muffins=>true}>
@@ -70,8 +70,8 @@ conn = Faraday.new(:url => 'http://us.battle.net') do |faraday|
   faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
 end
 response = conn.get do |request|
-	request.url '/api/wow/data/character/races'
-	request.options[:locale] = "fr_FR"
+  request.url '/api/wow/data/character/races'
+  request.options[:locale] = "fr_FR"
 end
 json_response = JSON.parse response.body
 pp json_response

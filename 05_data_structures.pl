@@ -9,14 +9,14 @@ print $hash{"key"}, "\n";
 # more examples
 %hash = ("fire" => "red", "water" => "blue" );
 %hash = (
-	"fire" 	=> "red",
-	"water" => "blue",
-	"air"		=> "green",
-	"earth"	=> "brown"
+  "fire"  => "red",
+  "water" => "blue",
+  "air"   => "green",
+  "earth" => "brown"
 );
 
 foreach $key (keys %hash) {
-	print "key: $key  value: $hash{$key} \n";
+  print "key: $key  value: $hash{$key} \n";
 }
 # Perl doesn't return anything from this loop so it's hard to
 # chain things together.  Also, it's confusing IMHO as to how to

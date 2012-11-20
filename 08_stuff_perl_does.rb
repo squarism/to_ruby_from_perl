@@ -2,12 +2,12 @@ section_spacer "08. Stuff Perl Does"
 
 # Perl has C-style for loops.  Ruby doesn't at all.
 # for ($i=0; $i <= 3; $i++) {
-#	  print "$i\n";
+#   print "$i\n";
 # }
 
 # the best way to do this in Ruby is like this:
 0.upto(3) do |i|
-	puts i
+  puts i
 end
 
 

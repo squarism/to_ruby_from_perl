@@ -10,9 +10,9 @@ array = [1, 2, 3]  # perl uses (1,2,3)
 puts "First element in array: #{array[0]}"
 # there's no switching of @ and $ symbols as there is in perl.
 # @ and $ in Ruby means scope, not variable class or type
-# $ruby_global = 1							(please don't use)
+# $ruby_global = 1              (please don't use)
 # @ruby_instance_variable = 1   (use inside classes)
-# plain_old_variable = 1			  (see section on scope)
+# plain_old_variable = 1        (see section on scope)
 
 # hashes are defined with {}
 # arrays are defined with []
@@ -28,10 +28,10 @@ hash = { :fire => "red", :water => "blue" }
 # Whitespace in Ruby doesn't matter like in Python.
 # But then Python doesn't have a bunch of end statements.
 hash = {
-	:fire 	=> "red",
-	:water	=> "blue",
-	:air 		=> "green",
-	:earth 	=> "brown",
+  :fire => "red",
+  :water => "blue",
+  :air => "green",
+  :earth => "brown",
 }
 
 # Ok we have our data structure, hash.  We could print
@@ -52,7 +52,7 @@ puts hash.class
 
 # Let's loop through them.
 hash.keys.each do |key|
-	puts "key: #{key}  value: #{hash[key]}"
+  puts "key: #{key}  value: #{hash[key]}"
 end
 
 # Okay, WTF is up with the |key| stuff?!
